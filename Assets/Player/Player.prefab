@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 23830904253566962}
   - component: {fileID: 54289018765572506}
   - component: {fileID: 114082283849826414}
-  - component: {fileID: 114793945378153648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -110,44 +109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1059048054828224}
+  durability: 0
   duraMult: 2
-  dura: 0
+  maxDurability: 0
   timer: 40
   acceleration: 35
   maxSpeed: 0
-  boostup: 0
---- !u!114 &114793945378153648
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1059048054828224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 17
-    i1: 171
-    i2: 142
-    i3: 1
-    i4: 252
-    i5: 140
-    i6: 53
-    i7: 20
-    i8: 232
-    i9: 127
-    i10: 62
-    i11: 232
-    i12: 251
-    i13: 251
-    i14: 171
-    i15: 58
-  m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
 --- !u!135 &135191148858200850
 SphereCollider:
   m_ObjectHideFlags: 1

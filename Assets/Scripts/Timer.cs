@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
-	public PlayerController pc;
+	public PlayerControllers pc;
 	public Text timerLabel;
 
 	private float time;
