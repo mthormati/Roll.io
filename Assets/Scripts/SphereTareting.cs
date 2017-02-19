@@ -25,8 +25,8 @@ public class SphereTareting : MonoBehaviour {
     {
         fullVector = new Vector3(target.transform.position.x-sphere.transform.position.x, 0, target.transform.position.z - sphere.transform.position.z);
         unitVector = fullVector / fullVector.magnitude;
-        if (Mathf.Abs(unitVector.x) * force > rb.velocity.x) unitVector.x *= 2;
-        if (Mathf.Abs(unitVector.z) * force > rb.velocity.z) unitVector.z *= 2;
+        if (Mathf.Abs(unitVector.x) * force < rb.velocity.x) unitVector.x *= 2;
+        if (Mathf.Abs(unitVector.z) * force < rb.velocity.z) unitVector.z *= 2;
         rb.AddForce(unitVector * force);
 
     }
