@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour {
         {
             avoided = false;
             countdown = timer;
-            if(!(durability <= 1)) durability*= 1/duraMult;
+            durability *= 1/duraMult;
             point = collision.contacts[0];
           // rb = player.GetComponent<Rigidbody>();
             Debug.Log(point.point);
-            rb.AddExplosionForce(250000/durability, point.point, 10);
+            rb.AddExplosionForce(25000/durability, point.point, 10);
         }
     }
     public float dura;

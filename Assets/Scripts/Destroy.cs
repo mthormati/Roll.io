@@ -7,8 +7,11 @@ public class Destroy : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
+        {
             Debug.Log("RIP You.");
-        else Destroy(other.gameObject);
+            
+        }
+        Destroy(other.gameObject);
     }
 
     // Use this for initialization
