@@ -14,13 +14,13 @@ public class ReducePowerBar : MonoBehaviour {
 
 
 	void BoostPower(){
-		PlayerController.durability -= 1;
-		transform.localScale = new Vector3 ((PlayerController.durability / PlayerController.maxDurability),1,1);
+		PlayerControllers.durability -= 1;
+		transform.localScale = new Vector3 ((PlayerControllers.durability / PlayerControllers.maxDurability),1,1);
 	}
 
 	void ReducePower(){
-		PlayerController.durability -= 5;
-		transform.localScale = new Vector3 ((PlayerController.durability / PlayerController.maxDurability),1,1);
+		PlayerControllers.durability -= 5;
+		transform.localScale = new Vector3 ((PlayerControllers.durability / PlayerControllers.maxDurability),1,1);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -30,8 +30,8 @@ public class ReducePowerBar : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		transform.localScale = new Vector3 ((PlayerController.durability / PlayerController.maxDurability),1,1);
-		if (PlayerController.durability > 1) {
+		transform.localScale = new Vector3 ((PlayerControllers.durability / PlayerControllers.maxDurability),1,1);
+		if (PlayerControllers.durability > 1) {
 			if (Input.GetKey (KeyCode.Space)) {
 				BoostPower ();
 			}

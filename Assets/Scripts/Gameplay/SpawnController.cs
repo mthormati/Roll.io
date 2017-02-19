@@ -18,7 +18,7 @@ public class SpawnController : MonoBehaviour
         StartCoroutine(Spawner());
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
     }

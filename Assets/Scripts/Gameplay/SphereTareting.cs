@@ -11,20 +11,23 @@ public class SphereTareting : MonoBehaviour {
     Vector3 fullVector;
     Vector3 unitVector;
     public float acceleration;
-    private float force;
+    public float force;
+    public static float counter = 0;
 
 	// Use this for initialization
 	void Start () {
         target = GameObject.FindGameObjectWithTag("Player");
         rb = sphere.GetComponent<Rigidbody>();
         targetRb = target.GetComponent<Rigidbody>();
-        force = rb.mass * acceleration;
     }
 
     private void FixedUpdate()
     {
+        counter++;
+        force = rb.mass * acceleration;
         fullVector = new Vector3(target.transform.position.x-sphere.transform.position.x, 0, target.transform.position.z - sphere.transform.position.z);
         unitVector = fullVector / fullVector.magnitude;
+        force += counter * .1f;
         if (Mathf.Abs(unitVector.x) * force < rb.velocity.x) unitVector.x *= 2;
         if (Mathf.Abs(unitVector.z) * force < rb.velocity.z) unitVector.z *= 2;
         rb.AddForce(unitVector * force);
