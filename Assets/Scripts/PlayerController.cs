@@ -21,16 +21,16 @@ public class PlayerController : MonoBehaviour {
         {
             avoided = false;
             countdown = timer;
-            durability *= 1/duraMult;
+            if(!(durability <= 1)) durability*= 1/duraMult;
             point = collision.contacts[0];
           // rb = player.GetComponent<Rigidbody>();
             Debug.Log(point.point);
-            rb.AddExplosionForce(25000/durability, point.point, 10);
+            rb.AddExplosionForce(250000/durability, point.point, 10);
         }
     }
     public float dura;
     private bool avoided = true;
-    public float timer = 80;
+    public float timer = 10;
     private float countdown;
 
     public float acceleration;
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour {
         if (countdown <= 0)
         {
             countdown = timer;
-            if (avoided && durability < 1000) durability += 1f;
+            if (avoided && durability < 1000) durability += 250f;
             if (durability > 1000) durability = 1000;
             avoided = true;
         }
