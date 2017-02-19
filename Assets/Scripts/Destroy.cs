@@ -9,10 +9,9 @@ public class Destroy : MonoBehaviour {
         if (other.tag == "Player")
         {
             Debug.Log("RIP You.");
-
+            
         }
-        else
-            Destroy(other.gameObject);
+        Destroy(other.gameObject);
     }
 
     // Use this for initialization
