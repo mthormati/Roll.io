@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject player;
     Rigidbody rb;
+	bool gameOver = false;
 
     public static float maxDurability = 1000;
 
@@ -115,6 +116,12 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
+		if (this.transform.position.y <= 0.5) {
+			gameOver = true;
+		}
+	}
+
+	public bool isGameOver(){
+		return gameOver;
 	}
 }

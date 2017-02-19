@@ -11,7 +11,7 @@ public class Destroy : MonoBehaviour {
             Debug.Log("RIP You.");
             
         }
-        Destroy(other.gameObject);
+        else Destroy(other.gameObject);
     }
 
     // Use this for initialization
