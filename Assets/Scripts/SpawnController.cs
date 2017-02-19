@@ -29,11 +29,11 @@ public class SpawnController : MonoBehaviour
 
         while (true)
         {
-            //randEnemy = Random.Range(0, n);
+			var randEnemy = Random.Range(0, enemies.Length);
 
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), 1, Random.Range(-spawnValues.z, spawnValues.z));
 
-            Instantiate(enemies[0], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+            Instantiate(enemies[randEnemy], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
 
             yield return new WaitForSeconds(spawnWait);
         }
