@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject player;
     Rigidbody rb;
 
-    public float durability;
-    float maxDura;
+    public static float durability;
+    float  maxDura;
     public float duraMult;
 
     ContactPoint point;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     private bool avoided = true;
-    public float maxDurability;
+    public static float maxDurability;
     public float timer = 80;
     private float countdown;
 
